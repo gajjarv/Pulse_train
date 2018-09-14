@@ -208,7 +208,7 @@ def injectFRB(data):
 
     #Partial inject
     stch = random.randint(0,nchan-(nchan)*frac)
-    #data1[stch:int(stch+(nchan*frac)),st:st+wid] = data1[stch:int(stch+(nchan*frac)),st:st+wid] + random.randint(SNRmin,SNRmax)*np.std(prof)
+    data1[stch:int(stch+(nchan*frac)),st:st+wid] = data1[stch:int(stch+(nchan*frac)),st:st+wid] + random.randint(SNRmin,SNRmax)*np.std(prof)
 
     #TODO: Find a better way to inject it
 
